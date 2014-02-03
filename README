@@ -1,0 +1,36 @@
+xonaru1service v0.8
+========
+
+Copyright (C) 2014  Atanas Georgiev
+
+This application enables the volume knob 
+on the Asus Xonar U1 USB sound card to be used with Linux.
+You can increase and decrease the volume by rotating the knob
+or mute the sound by pushing it.
+A volume bar is shown when you change the volume. 
+
+When you connect Xonar U1 device,
+the application will automatically set it as default sound card.
+When you unplug it, your other (integrated) sound card will be set as default.
+
+'xonaru1service' communicates with Xonar U1 thru 'xonaru1d'.
+'xonaru1d' must be running for 'xonaru1service' to operate.
+
+See https://github.com/atanas-t-georgiev/xonaru1d for more information.
+
+
+REQUIREMENTS:
+
+- JDK7 or OpenJDK7
+- Kernel with ALSA support (and the tools 'amixer' and 'aplay')
+- ant
+
+BUILD INSTRUCTIONS:
+
+- cd to the directory where 'build.xml' is
+- type 'ant jar' to compile the sources and generate jar file
+
+Start the program with the following command:
+'java -jar dist/xonaru1service.jar'
+
+The program is tested on Debian 7.3
